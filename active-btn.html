@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>active</title>
+    <style>
+        ul{
+            list-style: none;
+            margin-top: 50px;
+            display: flex;
+            gap: 10px;
+        }
+        .color-btn{
+            padding: 17px 25px;
+            background: rgb(54, 134, 180);
+            color: #fff;
+            font-size: medium;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a class="color-btn" href="#">Button 1</a></li>
+        <li><a class="color-btn" href="#">Button 2</a></li>
+        <li><a class="color-btn" href="#">Button 3</a></li>
+        <li><a class="color-btn" href="#">Button 4</a></li>
+    </ul>
+
+
+    <script>
+        var allbtn = document.getElementsByClassName('color-btn');
+        for(let i = 0; i < allbtn.length; i++){
+            allbtn[i].addEventListener('click', function(){
+                allbtn[i].style.background = 'red';
+                console.log(allbtn[i]);
+                
+            })
+        }
+
+
+// [...allbtn].forEach(el=>{
+//     el.addEventListener('click',function(){
+//         // [...allbtn].forEach(k=>{
+//         //     k.style.background = 'green'
+//         // })
+//         el.style.background = 'red'
+//     })
+// })
+        
+    </script>
+</body>
+</html>
+
